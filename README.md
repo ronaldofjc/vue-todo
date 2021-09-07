@@ -1,4 +1,5 @@
 # vue-todo
+Sample Todo list with Vue and Vuetify
 
 ## Project setup
 ```
