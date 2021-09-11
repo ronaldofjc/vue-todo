@@ -7,17 +7,11 @@
     >
       <v-card>
         <v-card-title class="text-h5">
-          Editar Tarefa
+          Excluir tarefa
         </v-card-title>
 				<v-divider></v-divider>
-				<v-card-text class="mt-2">Informe o novo título</v-card-text>
-				<v-text-field
-					class="px-3"
-					label="Título"
-					placeholder="Novo Título"
-					outlined
-          v-model="titulo"
-        ></v-text-field>
+				<v-card-text class="mt-2">Tem certeza que deseja excluir a tarefa?</v-card-text>
+				
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
@@ -30,9 +24,9 @@
           <v-btn
             color="primary"
             text
-            @click="editarTarefa()"
+            @click="removerTarefa()"
           >
-            Alterar
+            Excluir
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -45,20 +39,12 @@
     props:['tarefa'],
     data () {
       return {
-        dialog: true,
-        titulo: null
+        dialog: true
       }
     },
-    created() {
-      this.titulo = this.tarefa.titulo
-    },
     methods: {
-      editarTarefa() {
-        let novaTarefa = {
-          id: this.tarefa.id,
-          titulo: this.titulo
-        }
-        this.$store.commit('atualizaTarefa', novaTarefa)
+      removerTarefa() {
+        this.$store.commit('removeTarefa', this.tarefa.id)
         this.$emit('closeModal');
       }
     }
