@@ -56,7 +56,8 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Lista de Tarefas</v-app-bar-title>
+      <!-- <v-app-bar-title>Lista de Tarefas</v-app-bar-title> -->
+      <v-toolbar-title>Lista de Tarefas</v-toolbar-title>
 
       <v-spacer></v-spacer>
 

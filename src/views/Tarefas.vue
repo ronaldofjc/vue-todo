@@ -44,9 +44,13 @@
         novaTarefa: null        
       }
     },
+    created() {
+      this.$store.commit('buscarTarefas');
+    },
     methods: {
       adicionarTarefa() {
-        this.$store.commit('adicionaTarefa', this.novaTarefa)
+        //this.$store.commit('adicionaTarefa', this.novaTarefa)
+        this.$store.dispatch('adicionaTarefa', this.novaTarefa)
         this.novaTarefa = null
       }
     }
