@@ -58,7 +58,7 @@
           id: this.tarefa.id,
           titulo: this.titulo
         }
-        this.$store.commit('atualizaTarefa', novaTarefa)
+        this.$store.dispatch('atualizaTarefa', novaTarefa)
         this.$emit('closeModal');
       }
     }
