@@ -49,12 +49,15 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <center>
-        <v-toolbar-title class="mt-16">
-          <InputTarefa />
-        </v-toolbar-title>
-      </center>
-      
+      <v-container fill-height fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="12" sm="12" md="8">
+            <v-toolbar-title class="mt-16">
+              <InputTarefa />
+            </v-toolbar-title>
+          </v-col>
+        </v-row>
+      </v-container> 
     </v-app-bar>
 
     <v-main>
@@ -78,10 +81,5 @@ import InputTarefa from './components/InputTarefa.vue'
 </script>
 
 <style>
-  center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
+
 </style>
