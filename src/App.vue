@@ -38,7 +38,7 @@
       height="212"
       color="#fcb69f"
       dark      
-      src="./assets/bg.jpg"      
+      src="./assets/bg.jpg" 
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -51,7 +51,6 @@
 
       <center>
         <v-toolbar-title class="mt-16">
-          Lista de Tarefas
           <InputTarefa />
         </v-toolbar-title>
       </center>
@@ -69,7 +68,7 @@ import InputTarefa from './components/InputTarefa.vue'
   export default {
   components: { InputTarefa },
     data: () => ({ 
-      drawer: null,
+      drawer: false,
       items: [
           { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },          
           { title: 'Sobre', icon: 'mdi-help-box', to:'/sobre' },
@@ -77,3 +76,12 @@ import InputTarefa from './components/InputTarefa.vue'
     }),
   }
 </script>
+
+<style>
+  center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+</style>
